@@ -1,13 +1,10 @@
+import random
+
 def greet(name):
-    if name.isalpha():  # Check if name contains only letters
-        return f"Hello, {name}! Welcome to my simple Python app."
-    else:
-        return "Please enter a valid name (letters only)."
+    greetings = ["Hello", "Hi", "Greetings", "Welcome", "Howdy"]
+    random_greeting = random.choice(greetings)
+    return f"{random_greeting}, {name}! Welcome to my simple Python app."
 
 if __name__ == "__main__":
-    while True:  # Loop until valid input is received
-        name = input("Enter your name: ")
-        greeting = greet(name)
-        print(greeting)
-        if greeting.startswith("Hello"):  # Exit loop if valid name
-            break
+    name = input("Enter your name: ")
+    print(greet(name))
