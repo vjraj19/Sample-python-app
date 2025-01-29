@@ -1,7 +1,7 @@
 import random
 
 def greet(name):
-    greetings = ["Hello", "Hi", "Greetings", "Welcome", "Howdy"]
+    greetings = ["Hey", "Hi", "Greetings", "Welcome", "Howdy"]
     random_greeting = random.choice(greetings)
     return f"{random_greeting}, {name}! Welcome to my simple Python app."
 
