@@ -1,16 +1,13 @@
-# my_app.py
 def greet(name):
-  """
-  This function greets the user with a personalized message.
-
-  Args:
-    name: The name of the user to greet.
-
-  Returns:
-    A string containing the greeting message.
-  """
-  return f"Hello, {name}! Welcome to my simple Python app."
+    if name.isalpha():  # Check if name contains only letters
+        return f"Hello, {name}! Welcome to my simple Python app."
+    else:
+        return "Please enter a valid name (letters only)."
 
 if __name__ == "__main__":
-  name = input("Enter your name: ")
-  print(greet(name))
+    while True:  # Loop until valid input is received
+        name = input("Enter your name: ")
+        greeting = greet(name)
+        print(greeting)
+        if greeting.startswith("Hello"):  # Exit loop if valid name
+            break
